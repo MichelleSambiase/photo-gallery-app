@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 enum ButtonProps {
@@ -21,8 +22,8 @@ interface IButton {
 
 export default function Button({ type, buttonProps = 'DEFAULT_BUTTON', buttonText }: IButton) {
 	return (
-		<button type={type} className={`rounded-lg p-2 w-full md:w-1/2 ${BUTTONS_PROPS_MAP[buttonProps]}`}>
-			{buttonText}
+		<button type={type} className={`rounded-lg p-2 w-full flex items-center justify-around md:w-1/2 ${BUTTONS_PROPS_MAP[buttonProps]}`}>
+			<Image src='/googleIcon.png' width={25} height={25} alt='icono de google' /> {buttonText}
 		</button>
 	)
 }

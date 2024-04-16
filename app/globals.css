@@ -24,3 +24,16 @@ body {
 		text-wrap: balance;
 	}
 }
+
+input:focus-within ~ label {
+	@apply transform scale-75 -translate-y-6 -translate-x-4 text-cyan-800;
+}
+
+input:focus-within ~ label,
+input:not(:placeholder-shown) ~ label {
+	@apply transform scale-75 -translate-y-6 -translate-x-4;
+}
+
+input:focus-within ~ label {
+	@apply text-cyan-800;
+}

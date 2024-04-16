@@ -15,7 +15,13 @@ const config: Config = {
       },
       colors: {
         primary: '#7CD2D7'
-      }
+      },
+      zIndex: {
+        "-1": "-1",
+      },
+      transformOrigin: {
+        "0": "0%",
+      },
     },
   },
   plugins: [],
