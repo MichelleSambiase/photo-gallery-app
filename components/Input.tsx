@@ -29,15 +29,15 @@ const Input = ({ name, label, type, id, maxLength, onChange, onBlur, setShowPass
 				maxLength={maxLength}
 				onChange={onChange}
 				onBlur={onBlur}
-				className={`w-full h-10 px-2 text-gray-900 border-b border-gray-300 focus:border-cyan-800 outline-none appearance-none peer ${
+				className={`w-full h-10 pt-4 pl-2 text-sm bg-transparent text-[#838383] border-b border-gray-400 md:focus:border-cyan-800 outline-none appearance-none peer ${
 					error && 'border-errorInput border-[1px] active:-outline-offset-[3px] focus:ring-[3px] focus:ring-[#e9676766]'
 				} ${className}`}
 			/>
-			<label className='absolute top-4 left-0 duration-300'>{label}</label>
+			<label className='absolute top-4 left-0 duration-300 text-sm'>{label}</label>
 
 			{error && (
-				<div className='z-10 flex w-full items-start px-2 '>
-					<label className='text-xs font-medium text-errorInput '>{error}</label>
+				<div className='z-10 flex w-full items-start px-2'>
+					<label className='text-xs font-medium text-errorInput'>{error}</label>
 				</div>
 			)}
 			{icon && (
@@ -46,8 +46,8 @@ const Input = ({ name, label, type, id, maxLength, onChange, onBlur, setShowPass
 				</div>
 			)}
 			{type === 'password' && (
-				<button onClick={(showPassword) => setShowPassword?.(!showPassword)} type='button' className='absolute top-6 right-0 pr-5 focus:outline-none'>
-					<Image width={22} height={18} src={showPassword ? '/eyeOpen.png' : '/eyeClose.png'} alt='Icono de ojo' />
+				<button onClick={(showPassword) => setShowPassword?.(!showPassword)} type='button' className='absolute top-3 right-0  focus:outline-none'>
+					<Image width={22} height={18} style={{ width: 'auto' }} src={showPassword ? '/eyeOpen.png' : '/eyeClose.png'} alt='Icono de ojo' />
 				</button>
 			)}
 		</div>
