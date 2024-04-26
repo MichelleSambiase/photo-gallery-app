@@ -22,11 +22,21 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en' className={`relative min-h-screen ${space_grotesk.variable}`}>
-			<body className=' bg-gradient-to-b from-cyan-100 to-white'>
-				<AnimatedBlob className='w-40 absolute -top-16 -left-10 -z-1' stopColor='#FF4D9C' />
-				<AnimatedBlob className='w-40 absolute bottom-10 -z-1' stopColor='#6842FF' />
-				<main className='font-space'>{children}</main>
+		<html
+			lang='en'
+			className={` flex flex-col min-h-screen mx-auto px-4  pt-8 pb-16 bg-gradient-to-b from-cyan-100 to-white sm:px-0 sm:pt-0 sm:pb-0  ${space_grotesk.variable}`}>
+			<body className='relative flex flex-col flex-grow w-full overflow-hidden'>
+				<AnimatedBlob className='w-32 h-32 absolute -top-[60px] -left-10 -z-1' stopColor='#FF4D9C' />
+				<AnimatedBlob className='w-32 h-32 absolute -top-[40px] right-10 -z-1 md:left-60' stopColor='#FD6F00' />
+				<AnimatedBlob className='w-32 h-32 absolute top-[300px] right-10 -z-1 md:left-60' stopColor='#0C7D39' />
+				<AnimatedBlob className='w-32 h-32 absolute top-[60px] left-20 -z-1 md:left-[500px]' stopColor='#9C7A56' />
+
+				<AnimatedBlob className='w-32 h-32 absolute bottom-14 -left-10 -z-1' stopColor='#6842FF' />
+				<AnimatedBlob className='w-32 h-32 absolute  bottom-44 right-8 -z-1 md:right-[500px]' stopColor='#FF4D9C' />
+				<AnimatedBlob className='w-32 h-32 absolute  -bottom-0 right-8 -z-1 hidden md:flex md:right-[500px]' stopColor='#4D94FF' />
+
+				{/* header component */}
+				<main className='my-0 pt-16 flex-grow font-space sm:pt-0'>{children}</main>
 			</body>
 		</html>
 	)

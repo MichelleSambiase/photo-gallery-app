@@ -47,7 +47,7 @@ const Input = ({ name, label, type, id, maxLength, onChange, onBlur, setShowPass
 			)}
 			{type === 'password' && (
 				<button onClick={(showPassword) => setShowPassword?.(!showPassword)} type='button' className='absolute top-3 right-0  focus:outline-none'>
-					<Image width={22} height={18} style={{ width: 'auto' }} src={showPassword ? '/eyeOpen.png' : '/eyeClose.png'} alt='Icono de ojo' />
+					<Image width={22} height={18} src={showPassword ? '/eyeOpen.png' : '/eyeClose.png'} alt='Icono de ojo' />
 				</button>
 			)}
 		</div>

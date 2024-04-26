@@ -6,10 +6,8 @@ interface IAuthComponent {
 }
 export default function AuthLayout({ children }: IAuthComponent) {
 	return (
-		<div className='w-full px-4 md:px-0'>
-			<div className='sm:bg-white sm:w-1/2 sm:p-4'>
-				<div className=''>{children}</div>
-			</div>
+		<div className='w-full flex flex-col items-end h-full sm:px-0 '>
+			<div className='h-full w-1/2 sm:bg-white md:py-14'>{children}</div>
 		</div>
 	)
 }
